@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jessuar Ramírez | Portafolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #58cc02, #4a90e2);
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav button {
+      background: #ffde59;
+      border: none;
+      margin: 5px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background: #4a90e2;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    section {
+      display: none;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 15px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .sena-logo {
+      width: 180px;
+      margin: 15px 0;
+    }
+
+    /* Formulario moderno */
+    form {
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    form input:focus, form textarea:focus {
+      border: 1px solid #4a90e2;
+      box-shadow: 0 0 6px rgba(74,144,226,0.3);
+      outline: none;
+    }
+
+    form button {
+      background: linear-gradient(90deg, #58cc02, #4a90e2);
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: linear-gradient(90deg, #4a90e2, #58cc02);
+      transform: scale(1.05);
+    }
+
+    /* Redes sociales con iconos */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 15px;
+    }
+
+    .social-links a img {
+      width: 55px;
+      height: 55px;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .social-links a img:hover {
+      transform: scale(1.15);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .skills-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills-list li {
+      background: #58cc02;
+      color: white;
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+
+    .skills-list li:hover {
+      background: #4a90e2;
+    }
+
+    /* Footer CopyRight */
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      background: linear-gradient(90deg, #58cc02, #4a90e2);
+      color: white;
+      font-weight: bold;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jessuar Ramírez</h1>
+    <nav>
+      <button onclick="mostrar('inicio')">Inicio</button>
+      <button onclick="mostrar('estudios')">Estudios</button>
+      <button onclick="mostrar('proyectos')">Proyectos</button>
+      <button onclick="mostrar('habilidades')">Habilidades</button>
+      <button onclick="mostrar('biografia')">Biografía</button>
+      <button onclick="mostrar('contactame')">Contáctame</button>
+    </nav>
+  </header>
+
+  <!-- Inicio -->
+  <section id="inicio" class="active">
+    <div class="card">
+      <h2>Bienvenido a mi espacio</h2>
+      <p>
+        Hola, soy <strong>Jessuar David Ramírez</strong>. Tengo 17 años y actualmente me estoy formando como <strong>desarrollador de software</strong>.  
+        Me considero una persona <strong>fantástica, visionaria, sociable y arriesgada</strong>. Sueño con alcanzar metas grandes, con convertirme en un referente en el mundo del desarrollo, y con dejar huella en cada proyecto que realice.  
+      </p>
+    </div>
+    <div class="card">
+      <h3>Mi visión y misión</h3>
+      <p>
+        <strong>Visión:</strong> Ser uno de los mejores desarrolladores del mundo, aportando innovación, creatividad y soluciones a través de la tecnología.  
+        <br><br>
+        <strong>Misión:</strong> Aprender constantemente, no tener miedo a equivocarme, crear proyectos que inspiren a otros y ser parte del cambio positivo que trae la tecnología a nuestras vidas.  
+      </p>
+    </div>
+  </section>
+
+  <!-- Estudios -->
+  <section id="estudios">
+    <div class="card">
+      <h2>Mi Educación</h2>
+      <p>
+        Actualmente curso el programa de <strong>Análisis y Desarrollo de Software</strong> en el <strong>SENA</strong>, institución que me ha brindado las bases técnicas y teóricas para iniciar en este mundo del desarrollo.  
+      </p>
+      <img src="https://transespecialesbotero.com/wp-content/uploads/2021/05/logoSena.png" alt="Logo del SENA" class="sena-logo">
+    </div>
+    <div class="card">
+      <h3>Logros académicos</h3>
+      <ul>
+        <li>Participación en proyectos de formación interna.</li>
+        <li>Desarrollo de microproyectos en equipo.</li>
+        <li>Capacitación constante en plataformas digitales y autoaprendizaje.</li>
+        <li>Compromiso con el crecimiento personal y profesional.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos">
+    <div class="card">
+      <h2>Mis Proyectos</h2>
+      <p>
+        Desde mis primeros pasos como desarrollador, he estado motivado por una pasión muy especial: los <strong>videojuegos</strong>.  
+        Para mí, los videojuegos no son solo entretenimiento, sino una mezcla perfecta entre arte, lógica, narrativa y tecnología.
+      </p>
+      <ul>
+        <li><strong>Warforge</strong>: un videojuego que ya ha tenido reconocimiento en su comunidad y me permitió aprender muchísimo sobre diseño y mecánicas.</li>
+        <li><strong>GameLab</strong>: un laboratorio personal en el que pienso experimentar con nuevas mecánicas, inteligencia artificial y experiencias inmersivas.</li>
+        <li><strong>Proyectos educativos</strong>: pequeñas aplicaciones orientadas al aprendizaje, inspiradas en interfaces limpias y amigables como la de Duolingo.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Futuro en el desarrollo</h3>
+      <p>
+        Mis próximos pasos incluyen trabajar con <strong>realidad aumentada</strong>, <strong>inteligencia artificial</strong> y <strong>experiencias interactivas</strong> que puedan llevar la creatividad al siguiente nivel.  
+        Estoy abierto a colaborar con personas que compartan la misma visión innovadora.
+      </p>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="habilidades">
+    <div class="card">
+      <h2>Habilidades Técnicas</h2>
+      <ul class="skills-list">
+        <li>JavaScript</li>
+        <li>HTML & CSS</li>
+        <li>Python</li>
+        <li>Unity / Motores de juegos</li>
+        <li>Git / GitHub</li>
+        <li>Bases de datos</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Habilidades Personales</h3>
+      <ul>
+        <li>Trabajo en equipo</li>
+        <li>Comunicación efectiva</li>
+        <li>Creatividad e innovación</li>
+        <li>Resolución de problemas</li>
+        <li>Liderazgo juvenil</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Biografía -->
+  <section id="biografia">
+    <div class="card">
+      <h2>Mi Biografía</h2>
+      <p>
+        Nací con una curiosidad inmensa por la tecnología. Desde niño siempre me llamaron la atención los videojuegos y las computadoras.  
+        Al crecer, descubrí que no quería ser solo un jugador, sino alguien que pudiera <strong>crear</strong> esas experiencias digitales.  
+      </p>
+      <p>
+        Con 17 años, he aprendido que el éxito viene del esfuerzo constante, de arriesgarse y de confiar en uno mismo.  
+        Mi personalidad sociable me ha permitido conocer personas, compartir ideas y formar lazos que me inspiran a seguir creciendo.
+      </p>
+      <p>
+        Estoy convencido de que mi futuro está en la tecnología, y que el camino que elijo cada día me acerca a ser un referente en el mundo del desarrollo.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contáctame -->
+  <section id="contactame">
+    <div class="card">
+      <h2>Contáctame</h2>
+      <p>¿Quieres trabajar conmigo, colaborar en un proyecto o simplemente saludar? Llena este formulario y te responderé lo antes posible.</p>
+      <form action="mailto:jessuarramire@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="correo" placeholder="Tu correo" required>
+        <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+    <div class="card">
+      <h3>Mis redes sociales</h3>
+      <p>Sígueme para conocer más sobre mis proyectos y mi camino como desarrollador:</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/jessuarx_caex?igsh=MTZrZnZ4YXE4ZGhydg==" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/960px-Instagram_icon.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Jessuar Ramírez - Todos los derechos reservados
+  </footer>
+
+  <script>
+    function mostrar(id) {
+      let secciones = document.querySelectorAll("section");
+      secciones.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
